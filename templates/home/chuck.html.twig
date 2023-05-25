@@ -1,0 +1,18 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello HomeController!{% endblock %}
+
+{% block body %}
+<h1 class="test mt-5 mb-4">Blagues de Chuck Norris</h1>
+    {% for joke in jokes %}
+        <div class="border border-light p-3 mb-3">
+            <p>{{ joke.value }}</p>
+            <a href="" id="changeJoke" class="btn btn-primary">CHANGER</a>
+        </div>
+
+    {% endfor %}
+{% endblock %}
+
+{% block javascripts %}
+{{ encore_entry_script_tags('chuck') }}
+{% endblock %}
