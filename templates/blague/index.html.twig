@@ -1,9 +1,9 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Hello HomeController!{% endblock %}
+{% block title %}Hello BlagueController!{% endblock %}
 
 {% block body %}
-<h1 class="test mt-5 mb-4">Blagues de Chuck Norris</h1>
+    <h1 class="test mt-5 mb-4">Vos blagues</h1>
     {% for joke in jokes %}
         <div class="border border-light p-3 mb-3">
             <p id="jokeValue-{{ joke.id }}">{{ joke.value }}</p>
@@ -12,8 +12,4 @@
         </div>
 
     {% endfor %}
-{% endblock %}
-
-{% block javascripts %}
-{{ encore_entry_script_tags('chuck') }}
 {% endblock %}
